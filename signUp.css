@@ -1,0 +1,281 @@
+body {
+    background-color: rgb(197, 186, 197);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'lato', sans-serif; */
+    min-height: 100vh;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+}
+
+header {
+    margin: 0;
+    background-color: #a5a3a0;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #000;
+}
+
+.content {
+    background-color: #252124;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    bottom: 50%;
+    overflow: hidden;
+    margin: auto;
+    transform: translate(-50%, 50%);
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    animation-name: containeropen;
+    animation-duration: var(--modal-duration);
+    display: none;
+}
+
+
+.container-header {
+    background-color: #130816;
+    padding: 7px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.paragraph-one {
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    color: #fff;
+}
+
+.container-header h3 {
+    margin: 0;
+}
+
+.container-content {
+    padding: 5px;
+}
+
+.teachers div {
+    margin: 5px 0;
+}
+
+.teachers label {
+    display: flex;
+    font-size: 30px;
+    color: #88837f;
+    margin-bottom: 5px;
+}
+
+.teachers input {
+    font-size: 25px;
+    padding: 8px;
+    width: 100%;
+}
+
+.teachers.teachers-info {
+    padding: 10px;
+    width: 100%;
+}
+
+.container-contents {
+    padding: 5px;
+}
+
+.teacher div {
+    margin: 5px 0;
+}
+
+.teacher label {
+    display: flex;
+    font-size: 30px;
+    color: #88837f;
+    margin-bottom: 5px;
+}
+
+.teacher input {
+    font-size: 25px;
+    padding: 8px;
+    width: 100%;
+}
+
+.teacher.teacher-info {
+    padding: 10px;
+    width: 100%;
+}
+
+/* .containers {
+    background-color: rgba(0, 0, 0, 0.3);
+     position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    color: #000;
+    display: none;
+} */
+
+.content.show-content {
+    display: block;
+}
+
+/* Bellow are login styling for the container*/
+.contentOne {
+    background-color: #252124;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: auto;
+    transform: translate(-50%, 50%);
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    animation-name: containeropen;
+    animation-duration: var(--modal-duration);
+    display: none;
+}
+
+/* .containerOne {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+/* position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    color: #000;
+    /* display: none; 
+} */
+
+.container-one-header {
+    background-color: #b8b4a4;
+    padding: 1px;
+    color: #000;
+    margin: 0;
+    text-align: center;
+}
+
+.logs input {
+    font-size: 25px;
+    padding: 5px;
+    width: 100%;
+}
+
+.logs.login-info {
+    padding: 5px;
+    width: 100%;
+}
+
+.logs label {
+    display: flex;
+    font-size: 30px;
+    color: #88837f;
+    margin-bottom: 5px;
+}
+
+.logs div {
+    margin: 5px 0;
+}
+
+.containerOne-contents {
+    padding: 5px;
+}
+
+.contentOne.show-contentOne {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    background-color: transparent;
+}
+
+/*This is the end of the login styling */
+
+button {
+    font-size: 25px;
+    background-color: #ebcca4;
+    border-radius: 7px;
+    color: #000;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+/* form validation */
+.info small {
+    margin: 0;
+    color: #e74c3c;
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.info.success input {
+    border: 1px solid green;
+}
+
+.info.error input {
+    border: 1px solid red;
+}
+
+.info.error small {
+    visibility: visible;
+}
+
+.info input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.mySlides {
+    display: none;
+}
+
+.images {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    height: auto;
+    margin: 5px;
+    width: 100%;
+    /* display: none; */
+}
+
+img {
+    transition: 0.8s;
+    margin: 0;
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+}
+
+img:hover {
+    opacity: 0.4;
+    cursor: pointer;
+    transform: scale(1);
+    /* -webkit-transform: scale(1.1); */
+}

@@ -1,0 +1,629 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Open+Sans:wght@300&family=Questrial&display=swap');
+
+ * {
+     box-sizing: border-box;
+     text-decoration: none;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ .root {
+     --modal-duration: 1s;
+ }
+
+ body {
+     /*  background-color: #f5f5dc;*/
+     height: 100%;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     font-family: 'lato', sans-serif;
+     min-height: 100%;
+     /* transition: transform 0.3s ease; */
+     min-width: 100%;
+ }
+
+ nav {
+     width: 100%;
+     background-color: #cfbb90;
+ }
+.submit{
+width: 100%;
+}
+ .images {
+     position: absolute;
+     top: 50%;
+     left: 0;
+     height: auto;
+     margin: 0;
+     width: 100%;
+ }
+
+ img {
+     transition: 0.8s;
+     margin: 0;
+     opacity: 1;
+     display: flex;
+     width: 100%;
+     height: auto;
+     backface-visibility: hidden;
+ }
+
+ img:hover {
+     opacity: 0.4;
+     cursor: pointer;
+     transform: scale(1);
+     /* -webkit-transform: scale(1.1); */
+ }
+
+ /* Below are the styling for the signup button*/
+ .container {
+     background-color: rgba(0, 0, 0, 0.4);
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     color: #000;
+     display: none;
+ }
+
+ .container.show-contents {
+     display: inline-block;
+ }
+
+ .contents {
+     background-color: #252124;
+     position: absolute;
+     border-radius: 7px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+     left: 50%;
+     bottom: 50%;
+     overflow: hidden;
+     margin: auto;
+     transform: translate(-50%, 50%);
+     max-width: 100%;
+     width: 800px;
+     height: auto;
+     animation-name: containeropen;
+     animation-duration: var(--modal-duration);
+ }
+
+ /* form validation */
+ .info small {
+     margin: 0;
+     color: #e74c3c;
+     font-size: 25px;
+     visibility: hidden;
+ }
+
+ .info.success input {
+     border: 1px solid green;
+ }
+
+ .info.error input {
+     border: 1px solid red;
+ }
+
+ .info.error small {
+     visibility: visible;
+ }
+
+ .teacher.success input {
+     border-color: #2ecc71;
+ }
+
+ .teacher.error input {
+     border-color: #e74c3c;
+ }
+
+ .teacher small {
+     color: #e74c3c;
+     position: absolute;
+     left: 10px;
+     bottom: 6%;
+     visibility: hidden;
+ }
+
+ .teacher.error small {
+     visibility: visible;
+ }
+
+ .teacher input:focus {
+     outline: 0;
+     border-color: #777;
+ }
+
+ /* this is the styling for the image but it is not useful now */
+ /* .mySlides {
+     display: none;
+ } */
+
+ /* .info input:focus {
+     outline: 0;
+     border-color: #777;
+ }
+
+ .sign {
+     cursor: pointer;
+ } */
+ /* this is the end of form validation   */
+
+ /* this are styling for the login button */
+ .containers {
+     background-color: rgba(0, 0, 0, 0.4);
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     color: #000;
+     display: none;
+ }
+
+ .containers.show-containerTwo {
+     display: block;
+ }
+
+ .containerTwo {
+     background-color: #27221f;
+     color: #fff;
+     position: absolute;
+     border-radius: 7px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+     left: 50%;
+     bottom: 50%;
+     overflow: hidden;
+     margin: auto;
+     transform: translate(-50%, 50%);
+     max-width: 100%;
+     width: 600px;
+     height: auto;
+     animation-name: containeropen;
+     animation-duration: var(--modal-duration);
+ }
+
+
+ a:hover,
+ a.active {
+     background-color: #dfbc70;
+     color: #920909;
+ }
+
+ /* This is responsive navbar styling */
+ /*header {
+     line-height: 80px;
+     padding: 10px;
+     margin: auto;
+     text-align: center;
+     display: block;
+ }*/
+
+ /* nav {
+     background-color: #cfbb90;
+     height: 400px;
+     width: 100%;
+     /* padding: 20px; 
+     position: absolute;
+     width: 100%;
+     top: 0;
+     left: 0;
+     right: 0;
+     text-align: center;
+     justify-content: center;
+     display: block;
+
+ }
+
+ nav h1 {
+     font-size: 40px;
+     font-weight: bold;
+     color: #302030;
+ }
+
+ nav ul {
+     float: right;
+     margin-right: 20px;
+ }
+
+ nav ul li {
+     display: inline-block;
+     line-height: 80px;
+     margin: 0 5px;
+ }
+
+ nav ul li a {
+     color: #fff;
+     font-size: 30px;
+     padding: 7px 13px;
+     border-radius: 5px;
+     text-transform: uppercase;
+     text-align: end;
+ }
+
+
+
+ .checkbtn {
+     font-size: 20px;
+     color: #000;
+     float: right;
+     line-height: 80px;
+     margin-right: 50px;
+     cursor: pointer;
+     display: none;
+     /* background-color: #000; 
+ }
+
+ #check {
+     display: none;
+ }
+
+ p {
+     font-size: 30px;
+ }
+
+ h3 {
+     text-align: center;
+     color: #0c0e8a;
+     font-size: 40px;
+ }
+
+ h3:hover {
+     transform: scale(1.1);
+ }*/
+
+
+ /* .container-one-header {
+     background-color: #130816;
+     padding: 15px;
+     color: #aa7228;
+     margin: 0;
+     text-align: center;
+ }
+
+ .paragraph {
+     text-align: center;
+     justify-content: center;
+     margin: 0;
+     color: #fff;
+ }
+
+ .close-btn {
+     position: absolute;
+     top: 0;
+     right: 0;
+     padding: 20px;
+     background-color: transparent;
+ }
+
+ .container-one-header h3 {
+     margin: 0;
+ }
+
+ .container-contents {
+     padding: 5px;
+ }
+
+ .teacher div {
+     margin: 10px 0;
+     margin-bottom: 30px;
+ }
+
+ .teacher label {
+     display: flex;
+     font-size: 30px;
+     color: #88837f;
+ }
+
+ .teacher input {
+     font-size: 25px;
+     padding: 8px;
+     width: 100%;
+ }
+
+ .teacher.teacher-info {
+     padding: 10px;
+     width: 100%;
+ } */
+
+
+ /* button {
+     cursor: pointer;
+     border-radius: 10px;
+     background-color: #292906;
+     color: #fff;
+     padding: 10px;
+     font-size: 25px;
+ }
+
+ .submit {
+     cursor: pointer;
+     border-radius: 7px;
+     background-color: #240210;
+     padding: 10px;
+     width: 100%;
+     color: #fff;
+     font-size: 25px;
+     display: block;
+ }
+
+ .close-btn {
+     position: absolute;
+     top: 0;
+     right: 0;
+ } */
+
+ /* .container-two-header {
+     background-color: #b8b4a4;
+     padding: 1px;
+     color: #000;
+     text-align: center;
+ }
+
+ .container-two-header h3 {
+     margin: 5px 0;
+     font-size: 35px;
+ }
+
+ .containers-contents {
+     padding: 10px;
+ }
+
+ .student div {
+     padding: 15px 0;
+ }
+
+ .student label {
+     display: flex;
+     font-size: 35px;
+     color: #88837f;
+     margin-bottom: 10px;
+ }
+
+ .student input {
+     font-size: 30px;
+     padding: 10px;
+     width: 100%;
+ }
+
+ .student .teacher-info {
+     padding: 15px;
+     width: 100%;
+ } */
+
+ /* HERE ARE THE STYLING FOR RESPONSIVE NAVBAR */
+ /* @media(max-width:2500px) {
+
+     header {
+         font-size: 20px;
+         padding-left: 50px;
+         /* display: inline-block;
+     }
+
+     nav ul li a {
+         font-size: 30px;
+     }
+ }
+
+ @media(max-width:2000px) {
+     .checkbtn {
+         display: block;
+         /* background-color: #000; 
+     }
+
+     ul {
+         position: fixed;
+         width: 100%;
+         height: 100vh;
+         background-color: rgb(13, 20, 13);
+         top: 80px;
+         left: -100%;
+         text-align: center;
+         transition: all .5s;
+         /* display: block; 
+     }
+
+     nav ul li {
+         display: block;
+         margin: 50px 0;
+         line-height: 20px;
+     }
+
+     nav ul li a {
+         font-size: 20px;
+     }
+
+     a:hover,
+     a.active {
+         background-color: #dfbc70;
+         color: #920909;
+     }
+
+     #check:checked~ul {
+         left: 0;
+     }
+ }
+
+ @keyframes containeropen {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @media screen and (max-width:800px) {
+     div {
+         width: 100%;
+         height: 100%;
+     }
+ }
+
+ @media screen and (max-width:600px) {
+     div {
+         width: 90%;
+         height: 90%;
+     }
+ }
+
+ @media screen and (min-width:400px) {
+     div {
+         width: 100%;
+         height: 100%;
+     }
+ }
+
+ @media (max-width:800) {}
+
+ @media (max-width:700) {}
+
+ @media (max-width:500) {
+     input[type='text'] {
+         width: 100%;
+     }
+ }*/
+
+
+ /* this is navbar styling that is used by toggle */
+ /* nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 200px;
+     height: 100vh;
+     background-color: #757575;
+     z-index: 100;
+     color: #000;
+     transform: translateX(-100%);
+ } */
+
+ /* body.show-nav {
+     /* this is the width of the nav 
+     transform: translate(200px);
+ } */
+
+ /* a {
+     text-decoration: none;
+     color: #043331;
+     /* background-color: #220f04; 
+     padding: 15px;
+ }
+
+ a:hover {
+     color: #bdba15;
+     background-color: #000;
+     transition: .5s;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+
+ li {
+     padding: 20px;
+     display: flex;
+ } */
+
+ /* header {
+     margin: 0;
+     background-color: #dfbc70;
+     position: absolute;
+     height: auto;
+     width: 100%;
+     padding: 10px;
+     top: 0;
+     left: 0;
+     right: 0;
+     color: #000;
+ } */
+ /* .toggle {
+     position: absolute;
+     top: 20%;
+     left: 5%;
+     font-size: 50px;
+     background-color: transparent;
+     border: none;
+     color: #862e05;
+ } */
+
+ /* .container {
+     background-color: rgba(0, 0, 0, 0.3);
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     color: #000;
+     display: none;
+ }
+
+ .container.show-contents {
+     display: block;
+ }
+
+ .contents {
+     background-color: #252124;
+     position: absolute;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+     left: 50%;
+     bottom: 50%;
+     overflow: hidden;
+     margin: auto;
+     transform: translate(-50%, 50%);
+     max-width: 100%;
+     width: 800px;
+     height: auto;
+     animation-name: containeropen;
+     animation-duration: var(--modal-duration);
+ }
+
+ .container-one-header {
+     background-color: #130816;
+     padding: 2px;
+     color: #fff;
+     margin: 0;
+     text-align: center;
+ }
+
+ .paragraph {
+     text-align: center;
+     justify-content: center;
+     margin: 0;
+     color: #fff;
+ }
+
+
+
+ .container-one-header h3 {
+     margin: 0;
+ }
+
+ .container-contents {
+     padding: 5px;
+ }
+
+ .teacher div {
+     margin: 5px 0;
+ }
+
+ .teacher label {
+     display: flex;
+     font-size: 30px;
+     color: #88837f;
+     margin-bottom: 5px;
+ }
+
+ .teacher input {
+     font-size: 25px;
+     padding: 8px;
+     width: 100%;
+ }
+
+ .teacher.teacher-info {
+     padding: 10px;
+     width: 100%;
+ }

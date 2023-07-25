@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher and Student Platform System</title>
+    <link rel="stylesheet" href="styleG.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="first-nav">
+    <nav class="navbar navbar-expand-xl text-dark badge text-wrap">
+        <a href="" class="navbar-brand ms-3"> </a>
+        <button class="navbar-toggler bg-secondary float-end" type="button" data-bs-toggle="collapse"
+            data-bs-target="#btn">
+            <i class="fa fa-bars"></i>
+        </button>
+        <h1 class="display-5 m-1 p-1 fw-bold">Welcome to our website!!!!</h1>
+        <p class="fs-4 fw-light m-0">
+            What are you going to do...if you are visiting our website you probably want either to study or to
+            teach.
+        </p>
+        <h3 class="fw-boldt text-dark">Please Have An Account And Login To Get The Service.</h3>
+        <button class="btn btn-lg btn-dark fs-6 mt-4 p-1" id="signup">Sign Up</button>
+        <button class="btn btn-lg btn-dark fs-6 mt-4 p-1" id="sign">Login</button>
+
+        <div class="collapse navbar-collapse" id="btn">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active mx-2 fs-5 text-dark" href="indexG.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2 fs-5 text-dark" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2 fs-5 text-dark" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2 fs-5 text-dark" href="services.html">Services</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+    <div class="m-0 images">
+        <img src="nee.webp" id="image" class="mySlides w3-animate-top">
+        <img src="nee2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="home.webp" id="image" class="mySlides w3-animate-top">
+        <img src="home2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="nee5.jpg" id="image" class="mySlides w3-animate-top">
+    </div>
+    <div class="m-0 images">
+        <img src="newe2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="newe3.webp" id="image" class="mySlides w3-animate-top">
+        <img src="newe4.jpg" id="image" class="mySlides w3-animate-bottom">
+        <img src="newe5.jpg" id="image" class="mySlides w3-animate-top">
+        <img src="newe6.jpg" id="image" class="mySlides w3-animate-bottom">
+    </div>
+    <!-- Below are the code for the login button -->
+    <div class="text-center containers" id="containerTwo">
+        <div class="bg-dark-secondary containerTwo">
+            <div class="bg-dark p-1 m-0 container-two-header">
+                <h3 class="text-light fw-boldt fs-5">Login<button class="btn btn-dark m-0 p-2 btn-sm float-end close-btn"
+                        id="closebtn">
+                        <i class="fa fa-close fs-5"></i>
+                    </button></h3>
+                </p>
+            </div>
+            <div class="containers-contents">
+                <p class="fw-light m-0 fs-5">If you do not have an account you have to close this form</p>
+                <form class="student" id="students">
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="email">Email</label>
+                        <input type="email" id="emails" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your email" required />
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="password">Password</label>
+                        <input type="password" id="passwords" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your password" required />
+                    </div>
+                    <div class="submit">
+                        <button onclick="showHide()" type="submit" class="btn btn-sm p-1 m-1 btn-dark fw-boldt fs-5 bg-info submit"style="border-radius: 20px">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="text-center container" id="contents">
+        <div class="bg-dark-secondary contents">
+            <div class="bg-dark p-2 m-0 container-one-header">
+                <h3 class="text-light fw-bold fs-5">Sign Up <button
+                        class="btn btn-dark m-0 p-2 btn-sm float-end close-btn" id="close">
+                        <i class="fa fa-close fs-5"></i>
+                    </button></h3>
+            </div>
+            <div class="container-contents">
+                <div class="paragraph">
+                    <p class="text-light m-0 fs-5">If you don't want to have an account you can close this page
+
+                    </p>
+                </div>
+                <form class="fw-light teacher" id="teachers">
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="fullName">Full Name</label>
+                        <input type="text" id="name" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your full name" required />
+                        <small>Error Message</small>
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="email">Email</label>
+                        <input type="email" id="email" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your email" required />
+                        <small>Error Message</small>
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="phoneNo">Phone Number</label>
+                        <input type="number" id="phoneno" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your phone number" required />
+                        <small>Error Message</small>
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="adress">Adress</label>
+                        <input type="text" id="adress" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your adress" required />
+                        <small>Error Message</small>
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="password">Password</label>
+                        <input type="password" id="password" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your password" required />
+                        <small>Error Message</small>
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 text-light fw-boldt" type="passwordC">Confirm Password</label>
+                        <input type="password" id="passwordC" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please confirm your password" required />
+                        <small>Error Message</small>
+                    </div>
+
+                    <div class="submit">
+                        <button type="submit" class="btn btn-sm p-1 m-1 btn-dark fw-bold fs-6 bg-info submit" style="border-radius: 20px">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        //  const signup = document.getElementById('signup');
+        // signup.addEventListener('click', () =>
+        // window.location.href = "/signUp.html");
+
+        //Below are image styling
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+
+        const students = document.getElementById('students');
+        const emails = document.getElementById('emails');
+        const passwords = document.getElementById('passwords');
+        const sign = document.getElementById('sign');
+        //  const signUp = document.getElementById('signUp');
+
+        const teachers = document.getElementById('teachers');
+        const name = document.getElementById('name');
+        const phoneno = document.getElementById('phoneno');
+        const adress = document.getElementById('adress');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const passwordC = document.getElementById('passwordC');
+
+        const signup = document.getElementById('signup');
+        const close = document.getElementById('close');
+        const contents = document.getElementById('contents');
+
+        //this is the event that shows the containerTwo
+        sign.addEventListener('click', () => containerTwo.classList.add('show-containerTwo'));
+
+        //this is the event that hides the containerTwo
+        closebtn.addEventListener('click', () => containerTwo.classList.remove('show-containerTwo'));
+
+        //adding event listener to the windows to close the form container whenerver click outside the box
+        window.addEventListener('click', e => e.target == containerTwo ? containerTwo.classList.remove('show-containerTwo') : false);
+
+        // this is the event that shows the content class
+        signup.addEventListener('click', () => contents.classList.add('show-contents'));
+
+        //this is the event that hides content class
+        close.addEventListener('click', () => contents.classList.remove('show-contents'));
+
+
+        //event listeners for the login button
+        students.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (emails.value == window.localStorage.getItem("email") && passwords.value == window.localStorage.getItem("password")) {
+                window.location.href = "/additional.html";
+                localStorage.setItem('Are you active', 'yes');
+            }
+            else {
+                return alert("invalid email or password");
+            }
+        });     
+
+ if ('Are you active'.value == window.localStorage.getItem("yes")) {
+const button = document.createElement('button','Profile');
+console.log('hello');
+//button.textContent('Profile');
+
+    // var a;
+    //     function showHide()
+    //     {
+    //         if(a==1){
+    //             document.getElementById('signup').style.display="inline";
+    //             return a=0;
+    //         }
+    //         else{
+    //             document.getElementById('signup').style.display="none";
+    //             return a=1;
+    //         }
+    //     }
+ 
+// button.textContent
+//  button.innerHTML = 'Profile';
+//  console.log('hello');
+//  //let firstNav = document.querySelector('.first-nav');
+//  //firstNav.appendChild('profile');
+//  // profile.innerText('Profile');
+// // profile.id('profile');
+
+// let profile = document.createElement('div');
+//  let button = document.createElement('button'); 
+// const node = document.createTextNode("This is new.");
+// //para.appendChild(node);
+// profile.appendChild('button');
+
+// const parent = document.getElementById("");
+// const child = document.getElementById("");
+// parent.replaceChild(profile, child);
+         }
+
+
+        //show input error messsage
+        function showError(input, message) {
+            const info = input.parentElement;
+            info.className = 'info error';
+            const small = info.querySelector('small');
+            small.innerText = message;
+        }
+
+        //show success outline
+        function showSuccess(input) {
+            const info = input.parentElement;
+            info.className = 'info success';
+        }
+
+        // check email is valid
+        function checkEmail(email) {
+            if (!email.value)
+                return showError(email, 'Email can not be empty');
+            if (email.value.includes("@")) {
+                showSuccess(email);
+            } else {
+                showError(email, 'Email is not valid');
+            }
+        }
+
+        //check required fields
+        function checkRequired(inputArr) {
+            inputArr.forEach(function (input) {
+                if (input.value.trim() === '') {
+                    // console.log(input.id);
+                    showError(input, `${getFieldName(input)} is required`);
+                    //     // showError(input, `${input.id} is required`);
+                } else {
+                    showSuccess(input);
+                }
+            });
+        }
+
+        //check password match
+        function checkPasswordsMatch(input1, input2) {
+            if (input1.value !== input2.value) {
+                showError(input2, 'Password is not match');
+            }
+        }
+
+        //event listners
+        teachers.addEventListener('submit', function (e) {
+            e.preventDefault();
+            checkEmail(email);
+            checkPasswordsMatch(password, passwordC);
+            function hello() {
+                window.localStorage.setItem("name", name.value);
+                window.localStorage.setItem("email", email.value);
+                window.localStorage.setItem("phoneno", phoneno.value);
+                window.localStorage.setItem("adress", adress.value);
+                window.localStorage.setItem("password", password.value);
+                window.localStorage.setItem("passwordC", passwordC.value);
+            }
+
+            if (password.value == passwordC.value) {
+                hello();
+                alert("Congratulation you are successfully registered! you can close the page now and you have to complete the registration by login.");
+            }
+            else {
+                alert("sorry your password is not match");
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

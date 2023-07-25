@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service of the website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        justify-content: center;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+    }
+
+    li {
+        padding: 5px;
+        display: flex;
+    }
+
+    a:hover {
+        background-color: #5c4b12;
+        transition: .5s;
+    }
+
+    .link {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        background-color: #1b1919;
+        width: 400px;
+        height: 100%;
+        margin: 0;
+        color: #fff;
+        transform: translateX(-100%);
+    }
+
+    body.show-link {
+        transform: translate(400px);
+    }
+
+    .images {
+        height: auto;
+        margin: 5;
+        width: 100%;
+    }
+
+    .image {
+        transition: 0.8s;
+        margin: 0;
+        opacity: 1;
+        width: 100%;
+    }
+
+    img:hover {
+        opacity: 0.4;
+        cursor: pointer;
+        transform: scale(1);
+    }
+</style>
+
+<body>
+    <div class="link">
+        <h2>Hey!!!!</h2>
+        <h3>If you want to go back click the links below...</h3>
+        <ul>
+            <li> <a class="fw-bold" href="indexG.html">Home</a></li>
+            <li> <a href="about.html">About Us</a></li>
+            <li> <a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <h2>Thank you for using our website!!!</h2>
+    </div>
+    <nav class="navbar badge text-wrap m-0 p-3 bg-secondary text-centre text-dark" style="width: 100%;">
+        <h1 class="fs-1 text-white fw-light">Welcome!!!</h1>
+        <h2 class="fs-2 fw-light">This is the service our website give you...</h2>
+        <button class="btn btn-dark float-start toggle" id="toggle">
+            <i class="fa fa-bars fs-4"></i>
+        </button>
+    </nav>
+
+    <div class="images">
+        <img src="service2.webp" class="image mySlides w3-animate-bottom">
+        <img src="service3.webp" class="image mySlides w3-animate-top">
+        <img src="service4.webp" class="image mySlides w3-animate-bottom">
+        <img src="service.webp" class="image mySlides w3-animate-top">
+        <img src="service5.webp" class="image mySlides w3-animate-top">
+    </div>
+    <div>
+        <h2 class="fw-bold text-dark">Do you want to know the services our website give?</h2>
+
+        <p class="fs-5">Our website give easy and simple service without consuming your time.
+            In simple if you want to study you can get a teacher or if you want to teach you can also get job here
+            within
+            short period of time all you have to do is joining our website by login and have an account by Signing Up.
+            Thank You For Using Our Website!!!
+        </p>
+    </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+        //this is the button that shows the link class
+        toggle.addEventListener('click', () => document.body.classList.toggle('show-link'));
+
+        //Below are image styling
+        var indexes = 0;
+        images();
+
+        // function carousel() {
+        function images() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            indexes++;
+            if (indexes > x.length) { indexes = 1 }
+            x[indexes - 1].style.display = "block";
+            setTimeout(images, 3000);
+        }
+    </script>
+</body>
+
+</html>

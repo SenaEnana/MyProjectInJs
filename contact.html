@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #bcc0c7;
+            font-size: 25px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .mySlides {
+            display: none;
+        }
+/* 
+        .images {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: auto;
+            margin: 5px;
+            width: 100%;
+        } */
+
+        img {
+            transition: 0.8s;
+            margin: 0;
+            opacity: 1;
+            display: flex;
+            width: 100%;
+            height: auto;
+            backface-visibility: hidden;
+        }
+
+        img:hover {
+            opacity: 0.4;
+            cursor: pointer;
+            transform: scale(1);
+            /* -webkit-transform: scale(1.1); */
+        }
+
+        a {
+            text-decoration: none;
+            color: #320968;
+            padding: 5px;
+        }
+
+
+        li {
+            padding: 10px;
+            display: flex;
+        }
+
+        a:hover {
+            color: #778004;
+            background-color: #000;
+            transition: .5s;
+        }
+
+        .link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #f0eae4;
+            z-index: 100;
+            color: #000;
+            transform: translateX(-100%);
+            margin: 0;
+        }
+
+        body.show-link {
+            transform: translate(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar badge text-wrap ds-block" style=" background-color: #302c21; width:100%;">
+        <h1 class="fs-1 text-info text-centre">Welcome!!!</h1>
+        <button class="btn btn-dark float-start toggle" id="toggle">
+            <i class="fa fa-bars fs-4"></i>
+        </button>
+        <p class="fw-light fs-3 text-center p-3">You can contact us for additional information</p>
+        <div class="float-end">
+            <h3 class="p-2">Phone No:0987645202</h3>
+            <h4 class="p-2">Email:senaenanu@gmail.com</h3>
+        </div>
+    </nav>
+    <div class="link">
+        <h2>If you want to go back just click the link below...</h2>
+        <ul>
+            <li> <a href="indexG.html">Home</a></li>
+            <li> <a href="about.html">About Us</a></li>
+            <li> <a href="services.html">Services</a></li>
+        </ul>
+    </div>
+    <div class="images">
+        <img src="contactt2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="contactt3.webp" id="image" class="mySlides w3-animate-top">
+        <img src="contactt4.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="contactt5.webp" id="image" class="mySlides w3-animate-top">
+    </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+        //this is the button that show link class
+        toggle.addEventListener('click', () => document.body.classList.toggle('show-link'));
+
+        //Below are image styling
+        var indexes = 0;
+        images();
+
+        // function carousel() {
+        function images() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            indexes++;
+            if (indexes > x.length) { indexes = 1 }
+            x[indexes - 1].style.display = "block";
+            setTimeout(images, 3000);
+        }
+    </script>
+</body>
+
+</html>

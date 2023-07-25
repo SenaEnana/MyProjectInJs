@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Information Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        /* nav {
+            background-color: #e0dad2;
+            height: 300px;
+            width: 100%;
+            padding: 20px;
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+            justify-content: center;
+            text-align: center;
+        }*/
+
+        /* nav p {
+            color: #000;
+        }
+
+        p {
+            display: flex;
+            font-size: 30px;
+            color: #fff;
+            justify-content: center;
+        }*/
+
+        /* select {
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
+
+        div select {
+            display: block;
+        }*/
+
+
+        /* .container-one-header {
+            background-color: #807a81;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .paragraph {
+            text-align: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            color: #000;
+            border-radius: 7px;
+        }
+
+        .container-one-header h3 {
+            margin: 0;
+        }
+
+         .container-contents {
+            padding: 10px;
+        }
+
+        .teacher div {
+            margin: 0;
+            display: block;
+        }
+
+        .teacher label {
+            display: flex;
+            margin-bottom: 5px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+       .teacher input {
+            font-size: 30px;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ede7ee;
+        }
+
+        .teacher.teacher-info {
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        button {
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #1d1c18;
+            color: #b9b2b2;
+            padding: 15px;
+            font-size: 25px;
+        }*/
+
+        /*  .container-two-header {
+            background-color: #807a81;
+            padding: 15px;
+            text-align: center;
+        }
+        .container-two-header h3 {
+            margin: 0;
+        }
+
+        .containers-contents {
+            padding: 5px;
+        }
+
+        .student div {
+            margin: 5px 0;
+        }
+
+        .student label {
+            display: flex;
+            margin-bottom: 5px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .student input {
+            font-size: 30px;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ede7ee;
+        }
+
+        .student .teacher-info {
+            padding: 15px;
+            width: 100%;
+        }
+
+        */
+
+        .root {
+            --modal-duration: 1s;
+        }
+
+        body {
+            /* background-color: #b8b1a9;
+            margin: auto;
+            display: flex;
+            align-items: center;*/
+            justify-content: center;
+            font-family: 'lato', sans-serif;
+            min-height: 100vh;
+            height: 100%;
+            text-align: center;
+            font-size: 25px;
+            /* background-image: url(pro.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;*/
+        }
+
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            color: #000;
+            display: none;
+        }
+
+        .container.show-contents {
+            display: inline-block;
+        }
+
+        .contents {
+            background-color: #27221f;
+            position: absolute;
+            border-radius: 7px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            left: 50%;
+            bottom: 50%;
+            margin: auto;
+            transform: translate(-50%, 50%);
+            max-width: 100%;
+            width: 900px;
+            height: auto;
+            animation-name: containeropen;
+            animation-duration: var(--modal-duration);
+        }
+
+        .containers {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            color: #000;
+            display: none;
+        }
+
+        .containers.show-containerTwo {
+            display: block;
+        }
+
+        .containerTwo {
+            background-color: #27221f;
+            position: absolute;
+            border-radius: 7px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            left: 50%;
+            bottom: 50%;
+            margin: auto;
+            transform: translate(-50%, 50%);
+            max-width: 100%;
+            width: 900px;
+            height: auto;
+            animation-name: containeropen;
+            animation-duration: var(--modal-duration);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar  navbar-light bg-dark badge text-wrap" style="width: 100%;">
+        <h1 class="display-5 text-center">Welcome!!!!</h1>
+        <h3 class="text-centre fst-italic p-1 fw-light">
+            This page contains some additional information and you have to complete the registration by filling the form
+            you can click one of the button.
+
+        </h3>
+        <button class="btn btn-sm bg-secondary m-1 fw-lighter fs-5 open-btnn" id="signup">Teach</button>
+        <button class="btn btn-sm bg-secondary m-1 fw-lighter fs-5 open-btn" id="open">Study</button>
+    </nav>
+    <div class="container" id="contents">
+        <div class="contents bg-secondary">
+            <div class="bg-dark p-1 m-0 container-one-header">
+                <h3 class="text-light fw-bold">These Are Some Additional Information <button
+                        class="btn btn-dark m-0 p-1 btn-sm float-end close-btn" id="close">
+                        <i class="fa fa-close fc-light fs-5"></i>
+                    </button></h3>
+            </div>
+            <div class="container-contents">
+                <div class="paragraph">
+                    <p class="fw-lighter m-0 fs-5">If you don't want to teach please close this form</p>
+                </div>
+                <!-- <form class="teacher" id="teachers"> -->
+                <form action="profile.html" class="fw-light teacher" id="teachers" type="post" onsubmit>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 fw-lighter" type="education">Education Level</label>
+                        <select class="fs-6 p-1 form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option class="fs-5" value="bsc" id="education">BS</option>
+                            <option class="fs-5" value="msc" id="education">MS</option>
+                            <option class="fs-5" value="graduated" id="education">Graduated</option>
+                            <option class="fs-5" value="learning" id="education">Still Learning</option>
+                        </select>
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 fw-lighter" type="expert">Expert</label>
+                        <input type="text" id="expert" class="teacher-info p-1 fs-6 form-control form-control-lg"
+                            aria-label=".form-control-lg example" placeholder="please enter on what you are experted on"
+                            required />
+                    </div>
+                    <div class="p-2 m-0 info">
+                        <label class="float-start fs-5 fw-lighter" type="password">Password</label>
+                        <input type="password" id="passwords" class="p-1 fs-6 teacher-info form-control form-control-lg"
+                            aria-label=".form-control-lg example" placeholder="please enter your password" required />
+                    </div>
+                    <div class="submit">
+                        <button type="submit" class="btn btn-sm p-1 btn-dark fw-bold fs-5 submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="containers" id="containerTwo">
+        <div class="bg-secondary containerTwo">
+            <div class="bg-dark p-1 m-0 container-two-header">
+                <h3 class="text-light fw-bold">These Are Some Additional Information <button
+                        class="btn btn-dark m-0 p-1 btn-sm float-end close-btn" id="closebtn">
+                        <i class="fa fa-close fs-5"></i>
+                    </button></h3>
+            </div>
+            <div class="containers-contents">
+                <p class="fw-lighter m-0 fs-5">If you don't want to study please close this form</p>
+                <form class="student" id="students">
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-1 fw-lighter" type="subject">Subject</label>
+                        <input type="text" id="subject" class="p-1 fs-6 teacher-info form-control form-control-lg"
+                            aria-label=".form-control-lg example" placeholder="please enter your password"
+                            placeholder="please enter the field you want to study" required />
+                    </div>
+                    <div class="p-1 m-0 info">
+                        <label class="float-start fs-5 fw-lighter" type="time">Study Time</label>
+                        <input type="text" id="time" class="p-1 fs-6 teacher-info form-control form-control-lg"
+                            aria-label=".form-control-lg example" placeholder="please enter the time you want to study"
+                            required />
+                    </div>
+                    <div class="p-2 m-0 info">
+                        <label class="float-start fs-5 fw-lighter" type="password">Password</label>
+                        <input type="password" id="password" class="p-1 fs-6 teacher-info form-control form-control-lg"
+                            aria-label=".form-control-lg example" placeholder="please enter your password" required />
+                    </div>
+                    <div class="submit">
+                        <button type="submit" class="btn btn-sm btn-dark p-1 fw-bold fs-5 submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        const signup = document.getElementById('signup');
+        const close = document.getElementById('close');
+        const contents = document.getElementById('contents');
+        const open = document.getElementById('open');
+        const closebtn = document.getElementById('closebtn');
+        const containerTwo = document.getElementById('containerTwo');
+
+
+        // this is the event that shows the content class
+        signup.addEventListener('click', () => contents.classList.add('show-contents'));
+
+        //this is the event that hides content class
+        close.addEventListener('click', () => contents.classList.remove('show-contents'));
+
+        //this is the event that shows the containerTwo
+        open.addEventListener('click', () => containerTwo.classList.add('show-containerTwo'));
+
+        //this is the event that hides the containerTwo
+        closebtn.addEventListener('click', () => containerTwo.classList.remove('show-containerTwo'));
+
+        //adding event listener to the windows to close the form container whenerver click outside the box
+        window.addEventListener('click', e => e.target == contents ? contents.classList.remove('show-contents') : false);
+
+        //adding event listener to the windows to close the form container whenerver click outside the box
+        window.addEventListener('click', e => e.target == containerTwo ? containerTwo.classList.remove('show-containerTwo') : false);
+
+        //form validation for all of the class
+        const teachers = document.getElementById('teachers');
+        const education = document.getElementById('education');
+        const expert = document.getElementById('expert');
+        const passwords = document.getElementById('passwords');
+
+        const students = document.getElementById('students');
+        const password = document.getElementById('password');
+        const time = document.getElementById('time');
+        const subject = document.getElementById('subject');
+
+        //event listners
+        teachers.addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.localStorage.setItem("education", education.value);
+            window.localStorage.setItem("expert", expert.value);
+            alert("Congratulation your registration is successfuly done! you can close the page now thank you");
+
+            //this is for redirect page to another page or if the form in the login is correct the login page will be redirected to this page
+            window.location.href = "/profile.html";
+
+        });
+
+        students.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            window.localStorage.setItem("time", time.value);
+            window.localStorage.setItem("subject", subject.value);
+            alert("Congratulation your registration is successfuly done! you can close the page now thank you");
+
+            //this is for redirect page to another page or if the form in the login is correct the login page will be redirected to this page
+            window.location.href = "/profile.html";
+
+        });
+    </script>
+</body>
+
+</html>
