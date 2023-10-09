@@ -24,16 +24,12 @@
      min-width: 100%;
  }
 
- nav {
-     width: 100%;
-     background-color: #cfbb90;
- }
 .submit{
 width: 100%;
 }
  .images {
      position: absolute;
-     top: 50%;
+     top: 28%;
      left: 0;
      height: auto;
      margin: 0;
@@ -41,20 +37,11 @@ width: 100%;
  }
 
  img {
-     transition: 0.8s;
      margin: 0;
-     opacity: 1;
      display: flex;
      width: 100%;
      height: auto;
      backface-visibility: hidden;
- }
-
- img:hover {
-     opacity: 0.4;
-     cursor: pointer;
-     transform: scale(1);
-     /* -webkit-transform: scale(1.1); */
  }
 
  /* Below are the styling for the signup button*/
@@ -74,7 +61,7 @@ width: 100%;
  }
 
  .contents {
-     background-color: #252124;
+     background-color: #fff;
      position: absolute;
      border-radius: 7px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -84,7 +71,7 @@ width: 100%;
      margin: auto;
      transform: translate(-50%, 50%);
      max-width: 100%;
-     width: 800px;
+     width: 400px;
      height: auto;
      animation-name: containeropen;
      animation-duration: var(--modal-duration);
@@ -167,8 +154,8 @@ width: 100%;
  }
 
  .containerTwo {
-     background-color: #27221f;
-     color: #fff;
+     background-color: #000;
+     color: #000;
      position: absolute;
      border-radius: 7px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -178,17 +165,16 @@ width: 100%;
      margin: auto;
      transform: translate(-50%, 50%);
      max-width: 100%;
-     width: 600px;
+     width: 400px;
      height: auto;
-     animation-name: containeropen;
-     animation-duration: var(--modal-duration);
  }
-
 
  a:hover,
  a.active {
      background-color: #dfbc70;
      color: #920909;
+     border-radius: 20px;
+     transition: .6s;
  }
 
  /* This is responsive navbar styling */

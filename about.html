@@ -18,25 +18,16 @@
         transition: transform 0.3s ease;
     }
     .images {
-      
         height: auto;
         margin: 0;
         width: 100%;
     }
 
     img {
-        transition: 0.8s;
         margin: 0;
-        opacity: 1;
         width: 100%;
         height: 100;
         backface-visibility: hidden;
-    }
-
-    img:hover {
-        opacity: 0.4;
-        cursor: pointer;
-        transform: scale(1);
     }
 
     a {
@@ -55,6 +46,7 @@
         color: #41b141;
         background-color: #966214;
         transition: .5s;
+        border-radius: 20px;
     }
 
     .link {
@@ -76,8 +68,8 @@
 </style>
 
 <body>
-    <nav class="navbar badge text-wrap bg-secondary" style="width: 100%;">
-        <h1 class="fs-1 text-dark">About Us</h1>
+    <nav class="navbar badge text-wrap bg-dark w-100">
+        <h1 class="fs-2 text-warning">About Us</h1>
         <h2 class="fs-2 text-white fw-light">Do You Want To Know About Us?</h2>
         <button class="btn btn-dark p-2 float-start toggle" id="toggle">
             <i class="fa fa-bars fs-4"></i>
@@ -85,7 +77,6 @@
     </nav>
 
     <div class="link">
-        <h3 class="text-white">Hey here are the links to go back...</h3>
         <ul>
             <li><a href="indexG.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -93,10 +84,10 @@
         </ul>
     </div>
     <div class="images">
-        <img src="about2.webp" id="image" class="mySlides w3-animate-bottom">
-        <img src="about3.webp" id="image" class="mySlides w3-animate-top">
-        <img src="about4.webp" id="image" class="mySlides w3-animate-bottom">
-        <img src="about.webp" id="image" class="mySlides w3-animate-top">
+        <img src="images/about2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/about3.webp" id="image" class="mySlides w3-animate-top">
+        <img src="images/about4.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/about.webp" id="image" class="mySlides w3-animate-top">
     </div>
     <p>Our website is simple and easy,developed by considering some problems that are difficult to our society.
         This website is developed in order to develop web designing skill and it is very useful and have great

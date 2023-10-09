@@ -233,15 +233,11 @@
 
 <body>
     <nav class="navbar  navbar-light bg-dark badge text-wrap" style="width: 100%;">
-        <h1 class="display-5 text-center">Welcome!!!!</h1>
-        <h3 class="text-centre fst-italic p-1 fw-light">
-            This page contains some additional information and you have to complete the registration by filling the form
-            you can click one of the button.
-
-        </h3>
-        <button class="btn btn-sm bg-secondary m-1 fw-lighter fs-5 open-btnn" id="signup">Teach</button>
-        <button class="btn btn-sm bg-secondary m-1 fw-lighter fs-5 open-btn" id="open">Study</button>
+        <h2 class="text-center text-danger">Additional Infos</h2>
+        <button class="btn btn-lg bg-success m-1 float-end fw-lighter fs-5 open-btnn" id="signup">Teach</button>
+        <button class="btn btn-lg bg-danger float-end m-1 fw-lighter fs-5 open-btn" id="open">Study</button>
     </nav>
+
     <div class="container" id="contents">
         <div class="contents bg-secondary">
             <div class="bg-dark p-1 m-0 container-one-header">
@@ -297,14 +293,14 @@
                 <p class="fw-lighter m-0 fs-5">If you don't want to study please close this form</p>
                 <form class="student" id="students">
                     <div class="p-1 m-0 info">
-                        <label class="float-start fs-1 fw-lighter" type="subject">Subject</label>
+                        <label class="float-start fs-4 fw-lighter" type="subject">Subject</label>
                         <input type="text" id="subject" class="p-1 fs-6 teacher-info form-control form-control-lg"
-                            aria-label=".form-control-lg example" placeholder="please enter your password"
+                            aria-label=".form-control-lg example" placeholder="please enter the subject you want to study"
                             placeholder="please enter the field you want to study" required />
                     </div>
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 fw-lighter" type="time">Study Time</label>
-                        <input type="text" id="time" class="p-1 fs-6 teacher-info form-control form-control-lg"
+                        <input type="time" id="time" class="p-1 fs-6 teacher-info form-control form-control-lg"
                             aria-label=".form-control-lg example" placeholder="please enter the time you want to study"
                             required />
                     </div>
@@ -363,12 +359,12 @@
         const time = document.getElementById('time');
         const subject = document.getElementById('subject');
 
-        //event listners
+        //event listeners
         teachers.addEventListener('submit', function (e) {
             e.preventDefault();
             window.localStorage.setItem("education", education.value);
             window.localStorage.setItem("expert", expert.value);
-            alert("Congratulation your registration is successfuly done! you can close the page now thank you");
+            alert("Congratulation your registration is successfully done! you can close the page now thank you");
 
             //this is for redirect page to another page or if the form in the login is correct the login page will be redirected to this page
             window.location.href = "/profile.html";

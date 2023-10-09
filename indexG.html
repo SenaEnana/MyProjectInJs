@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher and Student Platform System</title>
+    <title>Teaching and Studying System</title>
     <link rel="stylesheet" href="styleG.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
@@ -15,52 +15,53 @@
 
 <body>
 <div class="first-nav">
-    <nav class="navbar navbar-expand-xl text-dark badge text-wrap">
+    <nav class="navbar navbar-expand-xl text-dark badge text-wrap bg-dark w-100">
         <a href="" class="navbar-brand ms-3"> </a>
-        <button class="navbar-toggler bg-secondary float-end" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler bg-warning float-end" type="button" data-bs-toggle="collapse"
             data-bs-target="#btn">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars p-1 fs-2"></i>
         </button>
-        <h1 class="display-5 m-1 p-1 fw-bold">Welcome to our website!!!!</h1>
-        <p class="fs-4 fw-light m-0">
-            What are you going to do...if you are visiting our website you probably want either to study or to
-            teach.
-        </p>
-        <h3 class="fw-boldt text-dark">Please Have An Account And Login To Get The Service.</h3>
-        <button class="btn btn-lg btn-dark fs-6 mt-4 p-1" id="signup">Sign Up</button>
-        <button class="btn btn-lg btn-dark fs-6 mt-4 p-1" id="sign">Login</button>
-
+        <h3 class="fs-1 m-1 p-1 text-warning fw-light float-start">Welcome!!!!</h1>
+        
         <div class="collapse navbar-collapse" id="btn">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto mb-0">
                 <li class="nav-item">
-                    <a class="nav-link active mx-2 fs-5 text-dark" href="indexG.html">Home</a>
+                    <a class="nav-link active mx-2 fs-5 text-success" href="indexG.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2 fs-5 text-dark" href="about.html">About Us</a>
+                    <a class="nav-link mx-2 fs-5 text-success" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2 fs-5 text-dark" href="contact.html">Contact Us</a>
+                    <a class="nav-link mx-2 fs-5 text-success" href="contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2 fs-5 text-dark" href="services.html">Services</a>
+                    <a class="nav-link mx-2 fs-5 text-success" href="services.html">Services</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <div class="register" id="register">
+        <button class="btn btn-lg bg-warning fs-5 mt-4 ms-2 me-2 p-2 d-flex float-end" id="signup">Sign Up</button>
+        <button class="btn btn-lg bg-success fs-5 mt-4 p-2 float-end d-flex" id="sign">Login</button>
+    </div>
+        <div id="profiles">
+        <!-- <button class="btn btn-lg bg-warning fs-5 mt-4 me-2 p-2 d-flex float-end" id="prof">Profile</button>
+        <button class="btn btn-lg bg-info fs-5 mt-4 me-2 p-2 d-flex float-end" id="logout">Logout</button> -->
+    </div>
 </div>
     <div class="m-0 images">
-        <img src="nee.webp" id="image" class="mySlides w3-animate-top">
-        <img src="nee2.webp" id="image" class="mySlides w3-animate-bottom">
-        <img src="home.webp" id="image" class="mySlides w3-animate-top">
-        <img src="home2.webp" id="image" class="mySlides w3-animate-bottom">
-        <img src="nee5.jpg" id="image" class="mySlides w3-animate-top">
+        <img src="images/nee.webp" id="image" class="mySlides w3-animate-top">
+        <img src="images/nee2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/home.webp" id="image" class="mySlides w3-animate-top">
+        <img src="images/home2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/nee5.jpg" id="image" class="mySlides w3-animate-top">
     </div>
     <div class="m-0 images">
-        <img src="newe2.webp" id="image" class="mySlides w3-animate-bottom">
-        <img src="newe3.webp" id="image" class="mySlides w3-animate-top">
-        <img src="newe4.jpg" id="image" class="mySlides w3-animate-bottom">
-        <img src="newe5.jpg" id="image" class="mySlides w3-animate-top">
-        <img src="newe6.jpg" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/newe2.webp" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/newe3.webp" id="image" class="mySlides w3-animate-top">
+        <img src="images/newe4.jpg" id="image" class="mySlides w3-animate-bottom">
+        <img src="images/newe5.jpg" id="image" class="mySlides w3-animate-top">
+        <img src="images/newe6.jpg" id="image" class="mySlides w3-animate-bottom">
     </div>
     <!-- Below are the code for the login button -->
     <div class="text-center containers" id="containerTwo">
@@ -73,20 +74,19 @@
                 </p>
             </div>
             <div class="containers-contents">
-                <p class="fw-light m-0 fs-5">If you do not have an account you have to close this form</p>
                 <form class="student" id="students">
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="email">Email</label>
-                        <input type="email" id="emails" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="email" id="emails" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please enter your email" required />
                     </div>
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="password">Password</label>
-                        <input type="password" id="passwords" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="password" id="passwords" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please enter your password" required />
                     </div>
                     <div class="submit">
-                        <button onclick="showHide()" type="submit" class="btn btn-sm p-1 m-1 btn-dark fw-boldt fs-5 bg-info submit"style="border-radius: 20px">Login</button>
+                        <button type="submit" class="btn btn-sm p-1 m-1 btn-dark fw-boldt fs-5 bg-info submit"style="border-radius: 20px">Login</button>
                     </div>
                 </form>
             </div>
@@ -96,7 +96,7 @@
     </div>
 
     <div class="text-center container" id="contents">
-        <div class="bg-dark-secondary contents">
+        <div class="bg-dark contents">
             <div class="bg-dark p-2 m-0 container-one-header">
                 <h3 class="text-light fw-bold fs-5">Sign Up <button
                         class="btn btn-dark m-0 p-2 btn-sm float-end close-btn" id="close">
@@ -105,50 +105,47 @@
             </div>
             <div class="container-contents">
                 <div class="paragraph">
-                    <p class="text-light m-0 fs-5">If you don't want to have an account you can close this page
-
-                    </p>
                 </div>
                 <form class="fw-light teacher" id="teachers">
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="fullName">Full Name</label>
-                        <input type="text" id="name" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="text" id="name" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please enter your full name" required />
                         <small>Error Message</small>
                     </div>
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="email">Email</label>
-                        <input type="email" id="email" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="email" id="email" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please enter your email" required />
                         <small>Error Message</small>
                     </div>
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="phoneNo">Phone Number</label>
-                        <input type="number" id="phoneno" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="number" id="phoneNo" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please enter your phone number" required />
                         <small>Error Message</small>
                     </div>
                     <div class="p-1 m-0 info">
-                        <label class="float-start fs-5 text-light fw-boldt" type="adress">Adress</label>
-                        <input type="text" id="adress" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
-                            placeholder="please enter your adress" required />
+                        <label class="float-start fs-5 text-light fw-boldt" type="address">Address</label>
+                        <input type="text" id="address" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
+                            placeholder="please enter your address" required />
                         <small>Error Message</small>
                     </div>
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="password">Password</label>
-                        <input type="password" id="password" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="password" id="password" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please enter your password" required />
                         <small>Error Message</small>
                     </div>
                     <div class="p-1 m-0 info">
                         <label class="float-start fs-5 text-light fw-boldt" type="passwordC">Confirm Password</label>
-                        <input type="password" id="passwordC" class="p-0 m-0 fs-6 form-control form-control-lg teacher-info"
+                        <input type="password" id="passwordC" class="p-1 m-0 fs-6 form-control form-control-lg teacher-info"
                             placeholder="please confirm your password" required />
                         <small>Error Message</small>
                     </div>
 
                     <div class="submit">
-                        <button type="submit" class="btn btn-sm p-1 m-1 btn-dark fw-bold fs-6 bg-info submit" style="border-radius: 20px">Submit</button>
+                        <button type="submit" class="btn btn-sm p-1 m-1 btn-dark fw-bold fs-6 bg-info submit" id="submission" style="border-radius: 20px">Submit</button>
                     </div>
                 </form>
             </div>
@@ -158,9 +155,6 @@
     </div>
     </div>
     <script>
-        //  const signup = document.getElementById('signup');
-        // signup.addEventListener('click', () =>
-        // window.location.href = "/signUp.html");
 
         //Below are image styling
         var myIndex = 0;
@@ -182,12 +176,11 @@
         const emails = document.getElementById('emails');
         const passwords = document.getElementById('passwords');
         const sign = document.getElementById('sign');
-        //  const signUp = document.getElementById('signUp');
 
         const teachers = document.getElementById('teachers');
         const name = document.getElementById('name');
-        const phoneno = document.getElementById('phoneno');
-        const adress = document.getElementById('adress');
+        const phoneNo = document.getElementById('phoneNo');
+        const address = document.getElementById('address');
         const email = document.getElementById('email');
         const password = document.getElementById('password');
         const passwordC = document.getElementById('passwordC');
@@ -195,6 +188,7 @@
         const signup = document.getElementById('signup');
         const close = document.getElementById('close');
         const contents = document.getElementById('contents');
+        const register = document.getElementById('register');
 
         //this is the event that shows the containerTwo
         sign.addEventListener('click', () => containerTwo.classList.add('show-containerTwo'));
@@ -202,7 +196,7 @@
         //this is the event that hides the containerTwo
         closebtn.addEventListener('click', () => containerTwo.classList.remove('show-containerTwo'));
 
-        //adding event listener to the windows to close the form container whenerver click outside the box
+        //adding event listener to the windows to close the form container whenever click outside the box
         window.addEventListener('click', e => e.target == containerTwo ? containerTwo.classList.remove('show-containerTwo') : false);
 
         // this is the event that shows the content class
@@ -217,52 +211,15 @@
             e.preventDefault();
             if (emails.value == window.localStorage.getItem("email") && passwords.value == window.localStorage.getItem("password")) {
                 window.location.href = "/additional.html";
-                localStorage.setItem('Are you active', 'yes');
+                localStorage.setItem('Are you active', 'true');
             }
             else {
                 return alert("invalid email or password");
             }
         });     
 
- if ('Are you active'.value == window.localStorage.getItem("yes")) {
-const button = document.createElement('button','Profile');
-console.log('hello');
-//button.textContent('Profile');
 
-    // var a;
-    //     function showHide()
-    //     {
-    //         if(a==1){
-    //             document.getElementById('signup').style.display="inline";
-    //             return a=0;
-    //         }
-    //         else{
-    //             document.getElementById('signup').style.display="none";
-    //             return a=1;
-    //         }
-    //     }
- 
-// button.textContent
-//  button.innerHTML = 'Profile';
-//  console.log('hello');
-//  //let firstNav = document.querySelector('.first-nav');
-//  //firstNav.appendChild('profile');
-//  // profile.innerText('Profile');
-// // profile.id('profile');
-
-// let profile = document.createElement('div');
-//  let button = document.createElement('button'); 
-// const node = document.createTextNode("This is new.");
-// //para.appendChild(node);
-// profile.appendChild('button');
-
-// const parent = document.getElementById("");
-// const child = document.getElementById("");
-// parent.replaceChild(profile, child);
-         }
-
-
-        //show input error messsage
+        //show input error message
         function showError(input, message) {
             const info = input.parentElement;
             info.className = 'info error';
@@ -293,7 +250,7 @@ console.log('hello');
                 if (input.value.trim() === '') {
                     // console.log(input.id);
                     showError(input, `${getFieldName(input)} is required`);
-                    //     // showError(input, `${input.id} is required`);
+                     // showError(input, `${input.id} is required`);
                 } else {
                     showSuccess(input);
                 }
@@ -304,26 +261,29 @@ console.log('hello');
         function checkPasswordsMatch(input1, input2) {
             if (input1.value !== input2.value) {
                 showError(input2, 'Password is not match');
+            }else{
+                window.location.href = "/additional.html";
             }
         }
 
-        //event listners
+        //event listeners
         teachers.addEventListener('submit', function (e) {
             e.preventDefault();
             checkEmail(email);
             checkPasswordsMatch(password, passwordC);
-            function hello() {
+            function setInfo() {
                 window.localStorage.setItem("name", name.value);
                 window.localStorage.setItem("email", email.value);
-                window.localStorage.setItem("phoneno", phoneno.value);
-                window.localStorage.setItem("adress", adress.value);
+                window.localStorage.setItem("phoneNo", phoneNo.value);
+                window.localStorage.setItem("address", address.value);
                 window.localStorage.setItem("password", password.value);
                 window.localStorage.setItem("passwordC", passwordC.value);
             }
 
             if (password.value == passwordC.value) {
-                hello();
-                alert("Congratulation you are successfully registered! you can close the page now and you have to complete the registration by login.");
+                setInfo();
+                alert("Congratulation you are successfully registered! you can close the page and you have to complete the registration by login.");
+                window.location.href = "/indexG.html";
             }
             else {
                 alert("sorry your password is not match");
@@ -331,6 +291,47 @@ console.log('hello');
 
         });
 
+    let active = localStorage.getItem('Are you active');
+     if(active == "true"){
+let profiles = document.getElementById('profiles');
+let button = document.createElement('BUTTON');
+let button2 = document.createElement('BUTTON');
+let text = document.createTextNode("Profile");
+let text2 = document.createTextNode("Logout");
+
+button.appendChild(text);
+button2.appendChild(text2);
+
+profiles.appendChild(button);
+profiles.appendChild(button2);
+
+button.className = "btn btn-lg bg-warning fs-5 mt-4 me-2 p-2 d-flex float-end";
+button2.className = "btn btn-lg bg-info fs-5 mt-4 me-2 p-2 d-flex float-end logout";
+
+button.id = "profile";
+button2.id = "logout";
+
+//profile button functionality
+const profile = document.getElementById('profile');
+profile.addEventListener('click', () => window.location.replace('profile.html'));
+
+//logout button functionality
+function log(){
+    window.location.replace('indexG.html');
+    localStorage.setItem('Are you active', 'false')
+}
+ const logout = document.getElementById('logout');
+logout.addEventListener('click', () =>log());
+
+console.log('yea');
+register.style.display = 'none';
+}else if(active == "false"){
+    register.style.display = 'flex';  
+    console.log('na');
+}else{
+    console.log("wrong output");
+}
+        
     </script>
 </body>
 

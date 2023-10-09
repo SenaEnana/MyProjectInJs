@@ -24,16 +24,14 @@
 </head>
 
 <body>
-    <nav class="navbar text-dark badge text-wrap m-0 p-2" style="width: 100%;  background-color: rgb(144, 124, 145);">
-        <h1 class="fs-1">This Is Your Profile Page!!!</h1>
-        <p class="fs-4 fw-light text-white">You can get your personal information here...</p>
-        <button class="btn btn-dark fs-4 p-2 float-start logout" id="logout">Logout</button>
-
+    <nav class="navbar bg-dark badge text-wrap m-0 p-2" style="width: 100%;  background-color: rgb(144, 124, 145);">
+        <h2 class="text-danger mt-3 fw-light">This Is Your Profile Page!!!</h1>
+        <button class="btn btn-lg bg-danger text-white fs-5 mt-4 me-2 p-2 d-flex float-end" id="logout">Logout</button>
     </nav>
-    <div class="container-lg text-light text-centre" style="background-color: #2b251e; width:800px;">
-        <h3 class="fw-light">Your Personal Information</h3>
+    <div class="container-lg text-dark text-centre">
+        <h3 class="fw-bold">Your Personal Information</h3>
 
-        <div class="fs-4 p-2 m-1 fw-light row">
+        <div class="fs-4 p-2 m-1 fw-bold row">
             <div class="p-1 m-2 info">Full Name</div>
             <div class="p-1 m-2 info">Email</div>
             <div class="p-1 m-2 info">PhoneNo</div>
@@ -45,7 +43,7 @@
             <div class="p-1 m-2 info">Subject</div>
             <div class="p-1 m-2 info">Study Time</div>
         </div>
-        <div class="fs-4 p-2 m-1 fw-light row">
+        <div class="fs-4 p-2 m-1 fw-bold row">
             <div id="first" class="p-1 m-2 infos"></div>
             <div id="second" class="p-1 m-2 infos"></div>
             <div id="third" class="p-1 m-2 infos"></div>
@@ -66,8 +64,8 @@
         window.onload = function () {
             document.getElementById('first').innerText = localStorage.getItem('name');
             document.getElementById('second').innerText = localStorage.getItem('email');
-            document.getElementById('third').innerText = localStorage.getItem('phoneno');
-            document.getElementById('fourth').innerText = localStorage.getItem('adress');
+            document.getElementById('third').innerText = localStorage.getItem('phoneNo');
+            document.getElementById('fourth').innerText = localStorage.getItem('address');
             document.getElementById('five').innerText = localStorage.getItem('password');
             document.getElementById('six').innerText = localStorage.getItem('passwordC');
             document.getElementById('seven').innerText = localStorage.getItem('education');
@@ -78,18 +76,11 @@
         };
         function log() {
             window.location.replace('indexG.html');
-            localStorage.setItem('Are you active', 'no');
+            localStorage.setItem('Are you active', 'false');
         }
         const logout = document.getElementById('logout');
-        logout.addEventListener('click', () => log()
-            //() => localStorage.setItem('Are you active', 'no')
-            // window.location.href = "/indexG.html"   
-            // window.location.replace('loginG.html')
-            // window.onunload = function () {
-            //  console.log(sessionStorage);
-            //sessionStorage.setItem('activeSession', 'false');
-            // }
-        );
+        logout.addEventListener('click', () => log());
+       
     </script>
 
 </body>
